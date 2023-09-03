@@ -1,16 +1,13 @@
 import streamlit as st
 
-# Function to update the "nft.txt" file with the provided information
 def update_nft_info(name, file):
-    with open("nft.txt", "w") as nft_file:
-        nft_file.write(f"Name: {name}\n")
-        nft_file.write(f"File: {file}\n")
+    #nft_file.write(f"Name: {name}\n")
+    #nft_file.write(f"File: {file}\n")
+    pass
 
-# Streamlit app
 def main():
-    st.title("Customize Flow - NFT Customization")
+    st.title("Customize Flow")
 
-    # Input fields for name and file
     name = st.text_input("Enter NFT Name:")
     file = st.file_uploader("Upload NFT File (Image, Video, etc.):", type=["txt", "jpg", "jpeg", "png", "gif", "mp4"])
 
@@ -19,7 +16,6 @@ def main():
             update_nft_info(name, file.name)
             st.success("NFT information updated successfully!")
 
-    # Display the current NFT information from the "nft.txt" file
     st.subheader("Current NFT Information:")
     try:
         with open("nft.txt", "r") as nft_file:

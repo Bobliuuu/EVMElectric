@@ -3,7 +3,6 @@ import streamlit as st
 def show_use_station_page():
     st.title("Use Station")
 
-    # Get the station title from query parameters
     station_title = st.experimental_get_query_params().get("station_title", ["Station Name"])[0]
     st.subheader(f"Station: {station_title}")
 
