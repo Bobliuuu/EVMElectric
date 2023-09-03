@@ -6,13 +6,13 @@ Electric vehicles are a common argument in the sustainability world. Although th
 
 ## What it does
 
-Introducing ElectricEVM, a web application that allows users to crowdsource charging stations using a DAO in order to complete purchases. Users are able to add charging stations, view existing stations on a map or web view, and . 
+Introducing ElectricEVM, a web application that allows users to crowdsource charging stations using a DAO in order to complete purchases. Users are able to add charging stations, view existing stations on a map or web view, and view charging stations. They're able to perform wallet based activities, like view wallet balances, mint NFTs, or run smart contracts with emulation. This done through our Fastify APi, and emulators like Flow emulator, Hardhat, and Hedera Testnet. They can also interact with a Voiceflow LLM, which will answer any questions about our app, or sustainability/blockchain related questions. 
 We used blockchain principles with Hedera, Flow, and Verbwire in our application. We used the Hedera Consensus Service to log payments, the Hedera HBAR wallet using the SDK to validate balances and create crypto payments, and the Hedera File Service (HFS) to upload and download files (from the Fastify API). 
 We used Flow's emulator and playground to mint and deploy NFTs (translated from Solidity to Cadence) to the Flow blockchain, using flow wallets, as well as a service to help new users onboard and mint NFTs. Next, Verbwire is used to take this metadata and send it cross chain to other chains, so it can be viewed on Opensea. 
 
 ## How we built it
 
-We used Streamlit & Matplotlib for our frontend application, and Node.JS & Typescript for the backend. We used the Verbwire API, Hedera SDK, and Flow Emulator, as well as Hardhat and Alchemy to deploy Solidity scripts. We used Fastify and Flask for the backend endpoints, connecting it together with Axios and `requests`. 
+We used Streamlit & Matplotlib for our frontend application, and Node.JS & Typescript for the backend. We used the Verbwire API, Hedera SDK, and Flow Emulator, as well as Hardhat and Alchemy to deploy Solidity scripts. We used Fastify and Flask for the backend endpoints, connecting it together with Axios and `requests`. We used Voiceflow and GPT-4 to train a Q&A large language model to answer queries about blockchain and electric vehicle sutainability. 
 
 ## Challenges we ran into
 
