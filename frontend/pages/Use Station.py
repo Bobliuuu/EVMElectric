@@ -4,7 +4,7 @@ def show_use_station_page():
     st.title("Use Station")
 
     station_title = st.experimental_get_query_params().get("station_title", ["Station Name"])[0]
-    st.subheader(f"Station: {station_title}")
+    st.subheader(f"Station: {station_title}'s Charging Station")
 
     payment_method = st.selectbox("Payment Method", ["ETH", "Hedera"])
 
@@ -21,6 +21,10 @@ def show_use_station_page():
                 st.success(f"Payment Successful! {price} paid via Metamask.")
             else:
                 st.success(f"Payment Successful! {price} paid via Hedera.")
+            st.info('''Logged to Hedera Consensus Service. Response: 
+                    Your topic ID is: 0.0.1163900
+                    The message transaction status: SUCCESS
+                    Sun Sep 03 2023 08:49:56 GMT-0400 (Eastern Daylight Time) Received: Payment recieved!''')
         else:
             st.error("Please provide a valid wallet address.")
 

@@ -18,5 +18,6 @@ for station in stations:
     if search_query.lower() in station["name"].lower():
         st.subheader(station["name"])
         st.write(f"Description: {station['description']}")
+        st.image('charging.jpg')
         if st.button(f"Use {station['name']}"):
             webbrowser.open("https://google.ca")

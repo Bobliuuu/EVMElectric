@@ -44,7 +44,7 @@ async function submitFirstMessage() {
   // Send message to topic
   let sendResponse = await new TopicMessageSubmitTransaction({
     topicId: topicId,
-    message: "Hello, HCS!",
+    message: "Payment recieved!",
   }).execute(client);
   const getReceipt = await sendResponse.getReceipt(client);
 

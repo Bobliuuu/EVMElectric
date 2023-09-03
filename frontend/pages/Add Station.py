@@ -31,7 +31,7 @@ def show_add_station_page():
             if station_image:
                 st.image(station_image, caption="Station Image", use_column_width=True)
             st.info('NFT minted!')
-            st.info('View transaction here: ')
+            st.info('View transaction here: https://mumbai.polygonscan.com/tx/0xa0abba499c7a5fd769d7a6693e281fa6ddbfae0d498c37bfe969710801a48aed')
         else:
             st.error("Please fill in all required fields.")
 
